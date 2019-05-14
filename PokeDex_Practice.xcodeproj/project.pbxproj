@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		CAB85DFD228B26BC00C75851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB85DFC228B26BC00C75851 /* AppDelegate.swift */; };
-		CAB85DFF228B26BC00C75851 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB85DFE228B26BC00C75851 /* ViewController.swift */; };
 		CAB85E02228B26BC00C75851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB85E00228B26BC00C75851 /* Main.storyboard */; };
 		CAB85E04228B26BD00C75851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB85E03228B26BD00C75851 /* Assets.xcassets */; };
 		CAB85E07228B26BD00C75851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB85E05228B26BD00C75851 /* LaunchScreen.storyboard */; };
+		CAB85E10228B26F400C75851 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB85E0F228B26F400C75851 /* Pokemon.swift */; };
+		CAB85E13228B2B5500C75851 /* PokemonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB85E12228B2B5500C75851 /* PokemonController.swift */; };
+		CAB85E16228B30B200C75851 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB85E15228B30B200C75851 /* PokemonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CAB85DF9228B26BC00C75851 /* PokeDex_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeDex_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB85DFC228B26BC00C75851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAB85DFE228B26BC00C75851 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAB85E01228B26BC00C75851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAB85E03228B26BD00C75851 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB85E06228B26BD00C75851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB85E08228B26BD00C75851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB85E0F228B26F400C75851 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		CAB85E12228B2B5500C75851 /* PokemonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonController.swift; sourceTree = "<group>"; };
+		CAB85E15228B30B200C75851 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,48 @@
 		CAB85DFB228B26BC00C75851 /* PokeDex_Practice */ = {
 			isa = PBXGroup;
 			children = (
-				CAB85DFC228B26BC00C75851 /* AppDelegate.swift */,
-				CAB85DFE228B26BC00C75851 /* ViewController.swift */,
 				CAB85E00228B26BC00C75851 /* Main.storyboard */,
+				CAB85E17228B30B800C75851 /* View Controllers */,
+				CAB85E14228B2B5A00C75851 /* Model Controllers */,
+				CAB85E11228B26F900C75851 /* Models */,
+				CAB85E0E228B26D000C75851 /* Resources */,
+			);
+			path = PokeDex_Practice;
+			sourceTree = "<group>";
+		};
+		CAB85E0E228B26D000C75851 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CAB85DFC228B26BC00C75851 /* AppDelegate.swift */,
 				CAB85E03228B26BD00C75851 /* Assets.xcassets */,
 				CAB85E05228B26BD00C75851 /* LaunchScreen.storyboard */,
 				CAB85E08228B26BD00C75851 /* Info.plist */,
 			);
-			path = PokeDex_Practice;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CAB85E11228B26F900C75851 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAB85E0F228B26F400C75851 /* Pokemon.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CAB85E14228B2B5A00C75851 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAB85E12228B2B5500C75851 /* PokemonController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		CAB85E17228B30B800C75851 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAB85E15228B30B200C75851 /* PokemonViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB85DFF228B26BC00C75851 /* ViewController.swift in Sources */,
 				CAB85DFD228B26BC00C75851 /* AppDelegate.swift in Sources */,
+				CAB85E10228B26F400C75851 /* Pokemon.swift in Sources */,
+				CAB85E16228B30B200C75851 /* PokemonViewController.swift in Sources */,
+				CAB85E13228B2B5500C75851 /* PokemonController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PokeDex_Practice/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PokeDex_Practice/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PokeDex_Practice/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PokeDex_Practice/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
